@@ -25,7 +25,7 @@ SECRET_KEY = 'chddi0zp$jf8_p6l*n1_cr)fhvu3+k3#=-x$^&u*gos92oiz*#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','course-django-react-api-production.up.railway.app']
 
 
 # Application definition
