@@ -27,7 +27,7 @@ SECRET_KEY = 'chddi0zp$jf8_p6l*n1_cr)fhvu3+k3#=-x$^&u*gos92oiz*#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','course-django-react-api-production.up.railway.app']
+ALLOWED_HOSTS = ['*','*.up.railway.app']
 
 
 # Application definition
@@ -84,10 +84,16 @@ WSGI_APPLICATION = 'movierater.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-default_dburl='sqlite:///'+ os.path.join(BASE_DIR,'db.sqlite3')
+# default_dburl='sqlite:///'+ os.path.join(BASE_DIR,'db.sqlite3')
 
+# DATABASES = {
+#     'default': config('DATABASE_URL',default=default_dburl,cast=dburl)
+# }
 DATABASES = {
-    'default': config('DATABASE_URL',default=default_dburl,cast=dburl)
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 REST_FRAMEWORK = {
