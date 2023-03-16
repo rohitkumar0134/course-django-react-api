@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000', 'htpp://localhost:4200','http://192.168.56.1:3000', 'https://movie-rater-react.netlify.app','https://main--movie-rater-react.netlify.app',
+    'http://localhost:3000', 'htpp://localhost:4200','https://mmcr0q-3000.csb.app', 'https://movie-rater-react.netlify.app','https://main--movie-rater-react.netlify.app',
 )
 
 ROOT_URLCONF = 'movierater.urls'
